@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Nemecek Audio`,
+    title: `Thiago Nemecek`,
     description: `Audio Portfolio`,
   },
   plugins: [

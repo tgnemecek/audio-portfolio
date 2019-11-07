@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import ReactGA from 'react-ga';
-import { loadReCaptcha } from 'react-recaptcha-v3';
+import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3';
 import 'styles/global.css';
 
 import Header from 'components/Header/index';
@@ -17,7 +17,25 @@ export default class HomePage extends React.Component {
   componentDidMount() {
     loadReCaptcha('6LccQsEUAAAAAPPks8UPc8m_mHe6MQm9NvbtR7xM');
     ReactGA.initialize('UA-150859579-1');
-    ReactGA.pageview('/');
+  }
+  verifyCallback = (recaptchaToken) => {
+    fetch('https://i35yb6qeh8.execute-api.us-east-1.amazonaws.com/default/thiagonemecek', {
+      method: 'POST',
+      body: JSON.stringify({
+        functionName: 'recaptcha',
+        params: {
+          token: recaptchaToken,
+          isDevelopment: !!process.env.isDevelopment
+        }
+      })
+    })
+    .then((res) => {
+      res.json().then((body) => {
+        if (body.success) {
+          ReactGA.pageview('/');
+        }
+      })
+    })
   }
   render() {
     return (
@@ -30,8 +48,13 @@ export default class HomePage extends React.Component {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1f9ba6"/>
           <meta name="msapplication-TileColor" content="#1f9ba6"/>
           <meta name="theme-color" content="#1f9ba6"/>
-          <title>Nemecek's Audio Portfolio</title>
+          <title>Thiago Nemecek: Audio Portfolio</title>
         </Helmet>
+        <ReCaptcha
+          sitekey='6LccQsEUAAAAAPPks8UPc8m_mHe6MQm9NvbtR7xM'
+          action='page_view'
+          verifyCallback={this.verifyCallback}
+        />
         <div className="content">
           <Header/>
           <TopSection/>

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import ReactGA from 'react-ga';
+import { ReCaptcha, loadReCaptcha } from 'react-recaptcha-v3';
 import Tab from 'components/Tab/index';
 import styles from './index.module.css';
 
@@ -7,17 +8,59 @@ export default class MusicSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentTab: 0
+      currentTab: 0,
+      currentTabLabel: 'Demo Reel',
+      recaptchaToken: '',
+      verifyToken: false
     }
   }
-
-  changeTab = (e) => {
-    this.setState({ currentTab: Number(e.target.value) });
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ verifyToken: true })
+    }, 1000);
   }
-
+  changeTab = (e) => {
+    this.setState({
+      currentTab: Number(e.target.value),
+      currentTabLabel: e.target.name
+    }, () => {
+      fetch('https://i35yb6qeh8.execute-api.us-east-1.amazonaws.com/default/thiagonemecek', {
+        method: 'POST',
+        body: JSON.stringify({
+          functionName: 'recaptcha',
+          params: {
+            token: this.state.recaptchaToken,
+            isDevelopment: !!process.env.isDevelopment
+          }
+        })
+      })
+      .then((res) => {
+        res.json().then((body) => {
+          console.log(body);
+          if (body.success) {
+            ReactGA.event({
+              category: "music",
+              action: "Clicked on a Music Tab: " + this.state.currentTabLabel
+            })
+          }
+        })
+      })
+    });
+  }
+  verifyCallback = (recaptchaToken) => {
+    this.setState({ recaptchaToken });
+  }
   render() {
     return (
       <section id="music" className={styles.music}>
+        {this.state.verifyToken ?
+          <ReCaptcha
+            key={this.state.currentTab} // Force reset
+            sitekey='6LccQsEUAAAAAPPks8UPc8m_mHe6MQm9NvbtR7xM'
+            action='page_view'
+            verifyCallback={this.verifyCallback}
+          />
+        : null}
         <h2>Original Music</h2>
         <div className={styles.music__tabContainer}>
           <Tab

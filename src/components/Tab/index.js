@@ -15,6 +15,7 @@ export default class Tab extends React.Component {
       <button
         value={this.props.order}
         onClick={this.props.onClick}
+        name={this.props.label}
         style={this.props.style || {}}
         className={this.className()}>
           {this.props.label}

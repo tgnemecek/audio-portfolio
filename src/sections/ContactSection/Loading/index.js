@@ -15,21 +15,24 @@ export default class Loading extends React.Component {
     loadReCaptcha('6LccQsEUAAAAAPPks8UPc8m_mHe6MQm9NvbtR7xM');
   }
   verifyCallback = (recaptchaToken) => {
-    fetch('https://dnnq0poewb.execute-api.us-east-1.amazonaws.com/default/recaptcha', {
+    fetch('https://i35yb6qeh8.execute-api.us-east-1.amazonaws.com/default/thiagonemecek', {
       method: 'POST',
       body: JSON.stringify({
-        token: recaptchaToken,
-        isDevelopment: !!process.env.isDevelopment,
-        name: this.props.name,
-        email: this.props.email,
-        message: this.props.message,
-        honeypot: this.props.honeypot
+        functionName: 'sendEmail',
+        params: {
+          token: recaptchaToken,
+          isDevelopment: !!process.env.isDevelopment,
+          name: this.props.name,
+          email: this.props.email,
+          message: this.props.message,
+          honeypot: this.props.honeypot
+        }
       })
     })
     .then((res) => {
       res.json().then((body) => {
         console.log(body);
-        if (body.mailSent) {
+        if (body.success) {
           ReactGA.event({
             category: "Contact Form",
             action: "Form Sent"
@@ -39,7 +42,7 @@ export default class Loading extends React.Component {
               this.props.closeBox();
             }, 5000)
           });
-        }
+        } else this.props.closeBox();
       })
     })
   }
