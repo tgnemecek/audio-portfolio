@@ -1,0 +1,15 @@
+.mediaPlayer__playOverlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 100;
+}
+
+.mediaPlayer__playOverlay svg {
+  width: 50% !important;
+  height: 50% !important;
+  opacity: 0.8;
+}

@@ -1,0 +1,39 @@
+.box__overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+}
+
+.box {
+  background-color: white;
+  padding: 2.4rem;
+  text-align: center;
+  position: relative;
+  outline: none;
+  overflow: auto;
+  max-height: 90%;
+}
+
+.box__header {
+  margin-bottom: 20px;
+}
+
+.box__closeButton {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+}
+
+.box__closeButton svg {
+  color: var(--darkGrey);
+  width: 15px !important;
+}

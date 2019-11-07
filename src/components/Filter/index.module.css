@@ -1,0 +1,20 @@
+.filter {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  width: 70px;
+  color: var(--fontColor);
+  border-radius: 50px;
+  border: none;
+  background: none;
+  transition: background 0.5s;
+  opacity: 0.9;
+}
+
+.filter:hover {
+  background: var(--darkGrey);
+}
+
+.filterActive {
+  background: var(--primaryColor) !important;
+}

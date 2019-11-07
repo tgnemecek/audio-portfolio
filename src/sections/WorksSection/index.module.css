@@ -1,0 +1,17 @@
+.works {
+  padding: 5% 0 !important;
+  text-align: center;
+}
+
+.works__grid {
+  line-height: 0px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .works__grid {
+    grid-template-columns: auto auto auto auto;
+  }
+}

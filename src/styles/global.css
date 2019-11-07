@@ -1,0 +1,73 @@
+@import "./variables.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primaryFont);
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: black;
+  color: var(--fontColor);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+section {
+  padding: 5% 15%;
+}
+
+@media only screen and (max-width: 900px) {
+  section {
+    padding: 5% 5%;
+  }
+}
+
+/* h1, h2, h3, h4, h5 {
+  font-weight: 100;
+} */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+p {
+  margin-bottom: 1.4rem;
+}
+
+a {
+  color: white;
+}
+
+ul, ol {
+  padding-left: 1.4rem;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  color: var(--fontColor);
+  background: none;
+  border: none;
+  font-family: var(--primaryFont);
+  text-transform: uppercase;
+}
+
+textarea {
+  overflow: hidden;
+}

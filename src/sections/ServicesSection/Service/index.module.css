@@ -1,0 +1,36 @@
+.services__container {
+  cursor: pointer;
+}
+
+.services__container:hover .services__dropbox {
+  transform: scaleY(1);
+}
+
+.services__dropbox {
+    position: absolute;
+    margin-top: 14px;
+    color: black;
+    background-color: #168d81;
+    text-align: left;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 0 5px 5px 5px;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+    width: 20%;
+}
+
+.icon__container {
+  background: #efefef;
+  padding: 20px;
+  margin: 10px auto;
+  width: 75px;
+  border-radius: 50px;
+}
+
+.icon {
+  color: #168d81;
+}

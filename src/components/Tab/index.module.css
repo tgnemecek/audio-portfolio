@@ -1,0 +1,21 @@
+.tab {
+  color: var(--fontColor);
+  background: var(--darkGrey);
+  opacity: 0.9;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+  padding: 15px;
+  -webkit-box-shadow: inset 5px 0px 2px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 5px 0px 2px 0px rgba(0,0,0,0.3);
+  box-shadow: inset 5px 0px 2px 0px rgba(0,0,0,0.3);
+}
+
+.tabFirst {
+  box-shadow: none;
+}
+
+.tabActive {
+  background: var(--primaryColor) !important;
+  opacity: 1 !important;
+}

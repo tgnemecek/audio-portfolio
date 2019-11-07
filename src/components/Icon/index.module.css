@@ -1,0 +1,9 @@
+.icon__button {
+  background: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  border-radius: 0  !important;
+  height: auto !important;
+}

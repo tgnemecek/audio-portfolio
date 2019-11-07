@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400i,700&display=swap');
+
+:root {
+  /* Colors */
+  --primaryColorValues: 31, 155, 166;
+  --primaryColor: rgb(var(--primaryColorValues));
+  --fontColor: white;
+  --lightGrey: #dbdbdb;
+  --grey: #696969;
+  --darkGrey: #424242;
+
+  /* Font */
+  /* --primaryFont: "Source Sans Pro", Helvetica, Arial, sans-serif; */
+  --primaryFont: "Roboto Condensed", Helvetica, Arial, sans-serif;
+}

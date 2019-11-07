@@ -1,0 +1,56 @@
+.contact {
+  background-image: url("images/background/bg-bottom.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.contact form {
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.honeypot {
+  display: none;
+}
+
+.contact__input {
+  margin: 20px 0;
+}
+
+.contact__input label {
+  display: block;
+}
+
+.contact__input input,textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: var(--lightGrey);
+  font-family: var(--primaryFont);
+}
+
+.contact__input textarea {
+  min-height: 100px;
+}
+
+.contact button {
+  padding: 10px;
+  width: 100px;
+  background: var(--darkGrey);
+  transition: background 0.5s;
+  border-radius: 6px;
+  border: none;
+}
+
+.contact button:hover {
+  background: black;
+}
+
+.contact__social {
+  float: right;
+}
+.contact__social > span {
+  margin: 0 10px;
+}

@@ -1,0 +1,26 @@
+.top {
+  text-align: center;
+  display: flex;
+  padding: 0 !important;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("images/background/bg-top.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.top__myName {
+  padding: 7vh 0 1vh 0;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.top__tabContainer {
+  margin: auto;
+  height: 80vh;
+}
+
+.top__tabContainer__tabBar {
+  width: 100%;
+  text-align: left;
+}

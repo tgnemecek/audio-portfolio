@@ -1,0 +1,50 @@
+.header__container {
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  margin-bottom: 500px;
+  transition: background-color 1s;
+}
+
+.header {
+  position: relative;
+  opacity: 0.8;
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1%;
+}
+
+.header__link {
+  color: white;
+  display: inline-block;
+  padding: 1.5%;
+  cursor: pointer;
+}
+
+.header__link a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__name {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 1.5%;
+}
+
+@media only screen and (max-width: 700px) {
+  .header__name {
+    display: none;
+  }
+  .header__link {
+    padding: 12px 1.5%;
+  }
+}

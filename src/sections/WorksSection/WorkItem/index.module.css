@@ -1,0 +1,85 @@
+.works__item {
+  position: relative;
+  display: inline-block;
+  min-height: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  will-change: filter;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: filter 1s;
+}
+
+.works__itemInactive {
+  pointer-events: none;
+  filter: grayscale(1) opacity(0.2);
+}
+
+.works__item__image {
+  width: 100%;
+  -ms-transform: rotate(0) scale(1);
+  -webkit-transform: rotate(0) scale(1);
+  transform: rotate(0) scale(1);
+  -moz-transition: transform .6s ease-in-out;
+  -webkit-transition: transform .6s ease-in-out;
+  -o-transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+}
+
+.works__item:hover .works__item__image {
+  -ms-transform: rotate(20deg) scale(1.5);
+  -webkit-transform: rotate(20deg) scale(1.5);
+  transform: rotate(20deg) scale(1.5);
+  -moz-transition: transform .6s ease-in-out;
+  -webkit-transition: transform .6s ease-in-out;
+  -o-transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+}
+
+.works__item__image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: none;
+  -moz-transition: background .6s ease-in-out;
+  -webkit-transition: background .6s ease-in-out;
+  -o-transition: background .6s ease-in-out;
+  transition: background .6s ease-in-out;
+}
+
+.works__item:hover .works__item__image:before {
+  background: rgba(var(--primaryColorValues), 0.8);
+  -moz-transition: background .6s ease-in-out;
+  -webkit-transition: background .6s ease-in-out;
+  -o-transition: background .6s ease-in-out;
+  transition: background .6s ease-in-out;
+}
+
+.works__item__text {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  color: white;
+  line-height: normal;
+  width: 100%;
+  padding: 2px;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: opacity .6s ease-in-out;
+}
+
+.works__item:hover .works__item__text {
+  opacity: 1;
+  transition: opacity .6s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .works__item__text {
+    font-size: 0.8rem;
+  }
+}
