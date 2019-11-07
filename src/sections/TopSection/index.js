@@ -4,9 +4,6 @@ import MediaPlayer from 'components/MediaPlayer/index';
 import Tab from 'components/Tab/index';
 import styles from './index.module.css';
 
-import generalReel from 'videos/general-video-reel.mp4';
-import gameAudioDemo from 'videos/game-audio-demo.mp4';
-
 export default class TopSection extends React.Component {
   render() {
     return (
@@ -68,9 +65,11 @@ class VideoContainer extends React.Component {
   renderMediaPlayer = () => {
     switch (this.state.currentTab) {
       case 0:
-        return <MediaPlayer src={generalReel}/>
+        return <MediaPlayer
+          src='/videos/general-video-reel.mp4'/>
       case 1:
-        return <MediaPlayer src={gameAudioDemo}/>
+        return <MediaPlayer
+          src='videos/game-audio-demo.mp4'/>
       default:
         return null
     }

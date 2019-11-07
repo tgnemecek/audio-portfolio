@@ -4,7 +4,6 @@ import { withMediaProps } from 'react-media-player';
 import styles from './index.module.css';
 import Icon from 'components/Icon/index';
 
-
 class Controls extends React.Component {
   playPause = () => {
     this.props.media.playPause();

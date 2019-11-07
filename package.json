@@ -2,7 +2,7 @@
   "name": "website",
   "private": true,
   "description": "Personal Audio Portfolio",
-  "version": "1.3.0",
+  "version": "1.3.2",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -19,16 +19,16 @@
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "aws-sdk": "^2.565.0",
-    "gatsby": "^2.4.2",
+    "gatsby": "^2.17.10",
     "gatsby-plugin-react-helmet": "^3.1.3",
     "gatsby-plugin-resolve-src": "^2.0.0",
-    "gatsby-plugin-s3": "^0.3.1",
+    "gatsby-plugin-s3": "^0.3.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-ga": "^2.7.0",
     "react-helmet": "^5.2.1",
     "react-mail-form": "^2.0.2",
-    "react-media-player": "^0.7.7",
+    "react-media-player": "^0.7.9",
     "react-modal": "^3.9.1",
     "react-motion": "^0.5.2",
     "react-recaptcha-v3": "^1.1.0",
@@ -36,12 +36,5 @@
   },
   "devDependencies": {
     "prettier": "^1.17.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

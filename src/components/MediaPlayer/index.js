@@ -18,6 +18,7 @@ export default class MediaPlayer extends React.Component {
             <Overlay/>
             <Player {...this.props}
               autoPlay={true}
+              muted={true}
               loop={true}
               className={styles.mediaPlayer__player}/>
             <div className={styles.mediaPlayer__lowerOverlay}>
