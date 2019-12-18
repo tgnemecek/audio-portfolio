@@ -55,15 +55,15 @@ export default class HomePage extends React.Component {
           action='page_view'
           verifyCallback={this.verifyCallback}
         />
-        <div className="content">
+        <div className="page-content">
           <Header/>
           <TopSection/>
           <AboutSection/>
           <MusicSection/>
           <WorksSection/>
           <ContactSection/>
+          <Footer/>
         </div>
-        <Footer/>
       </div>
     )
   }

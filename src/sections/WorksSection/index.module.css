@@ -1,6 +1,7 @@
 .works {
   padding: 5% 0 !important;
   text-align: center;
+  background: black;
 }
 
 .works__grid {
