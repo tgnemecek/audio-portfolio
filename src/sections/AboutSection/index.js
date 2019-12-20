@@ -12,7 +12,7 @@ export default class AboutSection extends React.Component {
           <div>
             <div className={styles.about__icon}>,,</div>
             <p>
-              Thiago (James) Nemecek is a film and game composer, sound designer and audio programmer based on Toronto, Canada, who has worked in the top-grossing brazilian films for consecutive years since 2016. Thiago has also worked as sound designer for video games, VR experiences and other media, including the 2016 Official League of Legends Brazilian Finals Opening Ceremony, acompanying a holographic projection on stage for thousands of spectators. When needed, Thiago works also as a programmer and uses this knowledge to implement audio in video games.
+              Thiago (James) Nemecek is a film and game composer, sound designer and audio programmer based in Toronto, Canada, who has worked in the top-grossing brazilian films for consecutive years since 2016. Thiago has also worked as sound designer for video games, VR experiences and other media, including the 2016 Official League of Legends Brazilian Finals Opening Ceremony, acompanying a holographic projection on stage for thousands of spectators. When needed, Thiago works also as a programmer and uses this knowledge to implement audio in video games.
             </p>
           </div>
           <Zoom>

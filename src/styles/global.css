@@ -17,7 +17,7 @@ body {
   font-family: var(--primaryFont);
   font-size: 1rem;
   font-weight: 300;
-  background-color: black;
+  background-color: var(--backgroundColor);
   color: var(--fontColor);
   text-align: center;
   text-transform: uppercase;

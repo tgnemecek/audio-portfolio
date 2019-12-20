@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faPlay, faPause, faVolumeUp, faVolumeMute, faPlayCircle, faCompress } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faPlay, faPause, faVolumeUp, faVolumeMute, faPlayCircle, faCompress, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faSoundcloud, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import styles from './index.module.css';
@@ -14,7 +14,8 @@ const ICON_SET = {
   "volume": faVolumeUp,
   "mute": faVolumeMute,
   "playCircle": faPlayCircle,
-  "fullscreen": faCompress
+  "fullscreen": faCompress,
+  "bars": faBars
 }
 
 export default class Icon extends React.Component {

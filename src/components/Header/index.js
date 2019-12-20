@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import styles from './index.module.css';
 
+import Icon from 'components/Icon/index';
 import logoHeader from 'images/home/logo-header.png';
 import { sectionsList } from 'startup/sections-list/index';
 
@@ -29,9 +31,9 @@ export default class Header extends React.Component {
   renderMenu = () => {
     return sectionsList.map((section, i) => {
       return (
-        <div key={i} className={styles.header__link}>
-          <Link to={"/#"+section.value}>{section.title}</Link>
-        </div>
+        <button className={styles.header__button} onClick={() => scrollTo("#"+section.value)}>
+          {section.title}
+        </button>
       )
     })
   }
@@ -52,8 +54,17 @@ export default class Header extends React.Component {
       <>
         <div className={styles.header__container} style={this.style()}>
           <div className={styles.header}>
-            <img className={styles.header__logo} src={logoHeader}/>
-            {this.renderMenu()}
+            <div className={styles.header__logo}>
+              <img src={logoHeader}/>
+            </div>
+            <div className={styles.header__menuWrapper}>
+              <div className={styles.header__bars}>
+                <Icon icon="bars"/>
+              </div>
+              <nav className={styles.header__menu}>
+                {this.renderMenu()}
+              </nav>
+            </div>
             <div className={styles.header__name}>
               <h4>Thiago Nemecek</h4>
             </div>

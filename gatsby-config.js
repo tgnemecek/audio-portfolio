@@ -4,6 +4,8 @@ module.exports = {
     description: `Audio Portfolio`,
   },
   plugins: [
+    `gatsby-plugin-postcss`,
+    'gatsby-plugin-smoothscroll',
     'gatsby-plugin-resolve-src',
     `gatsby-plugin-react-helmet`,
     {

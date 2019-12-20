@@ -6,5 +6,6 @@ Static website made with Gatsby (& React) for fast page load and Amazon Lambda f
 
 ## Information:
 
+-  To test locally, run "gatsby develop";
 -  To deploy, run: "npm run build && npm run deploy";
 -  Videos (.mp4) are ignored in git and should be uploaded manually to the static folder.

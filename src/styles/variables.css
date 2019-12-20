@@ -5,6 +5,9 @@
   --primaryColorValues: 31, 155, 166;
   --primaryColor: rgb(var(--primaryColorValues));
   --fontColor: white;
+  --backgroundColor: black;
+
+
   --lightGrey: #dbdbdb;
   --grey: #696969;
   --darkGrey: #424242;

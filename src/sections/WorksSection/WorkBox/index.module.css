@@ -17,6 +17,12 @@
   text-align: justify;
 }
 
+@media only screen and (max-width: 400px) {
+  .workbox__content {
+    font-size: 0.8rem;
+  }
+}
+
 .workbox__main {
   display: grid;
   grid-template-columns: auto auto;
