@@ -14,29 +14,30 @@
     "deploy": "gatsby-plugin-s3 deploy"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "aws-sdk": "^2.565.0",
-    "gatsby": "^2.17.10",
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "aws-sdk": "^2.594.0",
+    "braces": "^3.0.2",
+    "gatsby": "^2.18.16",
     "gatsby-plugin-postcss": "^2.1.18",
-    "gatsby-plugin-react-helmet": "^3.1.3",
+    "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-s3": "^0.3.2",
     "gatsby-plugin-smoothscroll": "^1.0.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-ga": "^2.7.0",
     "react-helmet": "^5.2.1",
     "react-mail-form": "^2.0.2",
     "react-media-player": "^0.7.9",
-    "react-modal": "^3.9.1",
+    "react-modal": "^3.11.1",
     "react-motion": "^0.5.2",
     "react-recaptcha-v3": "^1.1.0",
     "react-reveal": "^1.2.2"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^1.19.1"
   }
 }
