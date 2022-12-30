@@ -20,7 +20,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "aws-sdk": "^2.594.0",
     "braces": "^3.0.2",
-    "gatsby": "^2.18.16",
+    "gatsby": "^2.32.13",
     "gatsby-plugin-postcss": "^2.1.18",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-resolve-src": "^2.0.0",
